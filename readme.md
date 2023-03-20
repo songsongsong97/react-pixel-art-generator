@@ -13,4 +13,4 @@ npm run dev
 ```
 
 ## Demo
-![Demo]('/img/demo.gif')
+![Demo](demo.gif)
