@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Proxima Nova, system-ui, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow:auto;
+    background-color: #fde68a;
+  }
+  body{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@layer components {
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 1.5rem; /* Specified height */
+    background: #e5e7eb; /* Grey background */
+    border-radius: 15px;
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border-radius: 1.5rem;
+    width: 1.5rem; /* Set a specific slider handle width */
+    height: 1.5rem; /* Slider handle height */
+    background: #E384FF; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .slider::-moz-range-thumb {
+    width: 1.5rem; /* Set a specific slider handle width */
+    height: 1.5rem; /* Slider handle height */
+    background: #E384FF; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .colorPicker {
+    cursor:pointer;
+    appearance: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .colorPicker::-webkit-color-swatch{
+    border-radius: 8px;
+    border: solid 4px #191825;
+  }
+  .colorPicker::-moz-color-swatch{
+    border-radius: 8px;
+    border: solid 4px #191825;
+  }
+
+  .pixel-row {
+    display: flex;
+  }
+  
+  .pixel {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+}
